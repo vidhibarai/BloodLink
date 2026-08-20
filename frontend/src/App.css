@@ -1,0 +1,593 @@
+/* ================================
+   BLOODLINK - APP CSS
+   ================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8f9fc;
+  color: #172554;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ================================
+   APP
+   ================================ */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* ================================
+   NAVBAR
+   ================================ */
+
+.navbar {
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 3%;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 500px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: auto;
+  flex-shrink: 1;
+}
+
+.nav-links button {
+  border: none;
+  background: transparent;
+  padding: 8px 0;
+  color: #172554;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.nav-links button:hover {
+  color: #b91c3b;
+} 
+
+.login-btn {
+  background: #c51f3d;
+  color: white;
+  padding: 11px 25px;
+}
+
+.login-btn:hover {
+  background: #9f1630;
+}
+
+/* ================================
+   HERO SECTION
+   ================================ */
+
+.hero {
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 8%;
+  background: linear-gradient(135deg, #fff5f6, #ffffff);
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.tagline {
+  color: #c51f3d;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: 55px;
+  line-height: 1.1;
+  color: #172554;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #c51f3d;
+}
+
+.hero p {
+  color: #64748b;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* ================================
+   BUTTONS
+   ================================ */
+
+.primary-btn {
+  border: none;
+  background: #c51f3d;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  background: #9f1630;
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  border: 2px solid #c51f3d;
+  background: white;
+  color: #c51f3d;
+  padding: 12px 27px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.secondary-btn:hover {
+  background: #fff0f3;
+}
+
+.full-btn {
+  width: 100%;
+}
+
+/* ================================
+   PAGE SECTIONS
+   ================================ */
+
+.page-section {
+  min-height: 600px;
+  padding: 60px 8%;
+  background: #f8f9fc;
+}
+
+.page-section h1 {
+  text-align: center;
+  font-size: 40px;
+  color: #b91c3b;
+  margin-bottom: 10px;
+}
+
+.page-section > p {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 40px;
+  font-size: 17px;
+}
+
+/* ================================
+   SEARCH / FORM CARD
+   ================================ */
+
+.search-card,
+.form-card {
+  max-width: 850px;
+  margin: 35px auto;
+  padding: 35px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label,
+.search-card label,
+.form-card label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #172554;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d5dbe5;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  background: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #c51f3d;
+  box-shadow: 0 0 0 3px rgba(197, 31, 61, 0.1);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ================================
+   SEARCH GRID
+   ================================ */
+
+.search-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* ================================
+   DONOR CARDS
+   ================================ */
+
+.donor-list {
+  max-width: 1100px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.donor-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid #edf0f5;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+  transition: 0.3s;
+}
+
+.donor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.donor-card h3 {
+  color: #172554;
+  margin-bottom: 10px;
+}
+
+.blood-badge {
+  display: inline-block;
+  background: #ffe4e8;
+  color: #b91c3b;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.donor-card p {
+  color: #64748b;
+  margin: 8px 0;
+}
+
+.donor-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.donor-actions button {
+  flex: 1;
+}
+
+/* ================================
+   GET DIRECTIONS
+   ================================ */
+
+.direction-btn {
+  border: none;
+  background: #172554;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+.direction-btn:hover {
+  background: #0f172a;
+}
+
+/* ================================
+   FEATURE SECTION
+   ================================ */
+
+.features {
+  padding: 70px 8%;
+  background: white;
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 35px;
+  color: #172554;
+  margin-bottom: 40px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 30px 20px;
+  background: #fff7f8;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card .icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  color: #b91c3b;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* ================================
+   BLOOD BANK CARDS
+   ================================ */
+
+.bank-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.bank-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.bank-card h3 {
+  color: #172554;
+  margin-bottom: 12px;
+}
+
+.bank-card p {
+  color: #64748b;
+  margin: 8px 0;
+}
+
+/* ================================
+   MAP
+   ================================ */
+
+.map-container {
+  width: 100%;
+  height: 400px;
+  margin-top: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #e2e8f0;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ================================
+   EMERGENCY
+   ================================ */
+
+.emergency {
+  margin: 50px auto;
+  max-width: 1000px;
+  padding: 45px;
+  text-align: center;
+  background: #fff0f3;
+  border-radius: 18px;
+}
+
+.emergency h2 {
+  color: #b91c3b;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.emergency p {
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+/* ================================
+   LOGIN / REGISTER
+   ================================ */
+
+.auth-card {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 35px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.auth-card h2 {
+  text-align: center;
+  color: #b91c3b;
+  margin-bottom: 30px;
+}
+
+/* ================================
+   REQUEST BLOOD
+   ================================ */
+
+.request-card {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+  background: #172554;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 4%;
+  }
+
+  .hero {
+    padding: 50px 5%;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .donor-list,
+  .bank-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    height: auto;
+    padding: 15px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 45px 20px;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .search-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-grid,
+  .donor-list,
+  .bank-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-section {
+    padding: 40px 20px;
+  }
+
+  .search-card,
+  .form-card,
+  .auth-card,
+  .request-card {
+    padding: 22px;
+  }
+}
