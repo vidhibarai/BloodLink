@@ -37,7 +37,7 @@ The platform helps users find suitable blood donors, register as donors, submit 
 | Vidhi Barai | Team Leader |
 | Aadya Dixit | Team Member |
 | Priyani Shendre | Team Member |
-| Tanvi Wharekar | Team Member |
+| Tanvi Warhekar | Team Member |
 
 ---
 
